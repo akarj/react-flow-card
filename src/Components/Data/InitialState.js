@@ -39,7 +39,7 @@ export const initialState = [
       label: "Card Generate",
     },
     position: {
-      x: 100,
+      x: 500,
       y: 150,
     },
   },
