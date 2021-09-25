@@ -2,8 +2,9 @@
   text-align: center;
 
   div.generate-button-div {
+    z-index: 10;
     position: absolute;
-
+    display: block;
     right: 3rem;
     width: 11rem;
     height: 3rem;

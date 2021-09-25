@@ -3,7 +3,6 @@ import Module from "../Modules/Module/Module";
 
 export default function BottomBar() {
   const onDragStart = (event, nodeType) => {
-    console.log("node-type", nodeType);
     event.dataTransfer.setData("application/reactflow", nodeType);
     event.dataTransfer.effectAllowed = "move";
   };

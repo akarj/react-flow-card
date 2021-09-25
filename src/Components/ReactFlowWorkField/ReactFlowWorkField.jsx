@@ -5,8 +5,6 @@ import ReactFlow, {
   removeElements,
   addEdge,
   ReactFlowProvider,
-  useCallback,
-  useEffect,
   Controls,
 } from "react-flow-renderer";
 import TextNode from "../Modules/TextField/TextField";
@@ -21,16 +19,17 @@ const nodeTypes = {
   OutNode,
 };
 
-/*TODO
+/*
+[TODO]
 
 
 @params :[modules]
-    1. Image Module
+   => 1. Image Module
     2. Text Module
     3. Card Module
     4. OutputModule
 
-=> Drag and Drop Functionality
+
 */
 
 let text_id = 2;
@@ -42,12 +41,14 @@ const getId = type =>
     : type === "IMAGE"
     ? `image-${image_id++}`
     : `card-${card_id++}`;
-let id = 0;
-// const getId = () => `dndnode_${id++}`;
+
 export default function ReactFlowWorkField() {
+  // [States]
   const [elements, setElements] = useState(initialState);
   const [reactFlowInstance, setReactFlowInstance] = useState(null);
   const reactFlowWrapper = useRef(null);
+
+  // [Functions]
   const onDragOver = event => {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
@@ -85,13 +86,16 @@ export default function ReactFlowWorkField() {
         elements={elements}
         nodeTypes={nodeTypes}
         snapToGrid={true}
-        // snapGrid={snapGrid}
+        snapGrid={[20, 20]}
         defaultZoom={1.5}
         onDragOver={onDragOver}
         onDrop={onDrop}
         onLoad={onLoad}
+        style={{ backgroundColor: "lightcoral" }}
         onElementsRemove={onElementsRemove}
-      />
+      >
+        <Controls />
+      </ReactFlow>
     </div>
   );
 }
