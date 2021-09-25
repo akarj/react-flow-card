@@ -1,0 +1,8 @@
+div.bottomBar-container {
+  display: flex;
+  border-top: 2px solid black;
+  place-content: center;
+  & > div {
+    margin: 1rem;
+  }
+}
