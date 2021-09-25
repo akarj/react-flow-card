@@ -1,0 +1,48 @@
+div.imageField-container {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: cadetblue;
+  border: 1px solid black;
+  border-radius: 15px;
+
+  & > div {
+    padding: 0;
+    margin: 0;
+  }
+
+  div.title {
+    margin: 0.25rem;
+    border: 1px solid black;
+
+    header {
+      background-color: rgb(43, 43, 43);
+      color: blanchedalmond;
+
+      h2 {
+        font-weight: normal;
+      }
+    }
+  }
+
+  div.image-container {
+    min-height: 1rem;
+
+    img {
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+
+  div.image-add {
+    input {
+      height: 1rem;
+    }
+  }
+
+  .nodeOut {
+    background-color: #555;
+  }
+}
