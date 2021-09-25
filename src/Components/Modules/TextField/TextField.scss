@@ -1,0 +1,43 @@
+div.textField-container {
+  height: 11rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(41, 223, 81);
+
+  div.desc {
+    margin: 0.25rem;
+    padding: 0.25rem;
+
+    header {
+      text-align: center;
+      text-overflow: none;
+      color: lightcyan;
+
+      h2 {
+        text-anchor: middle;
+      }
+    }
+  }
+
+  div.text-show-field {
+    margin: 0.25rem;
+    padding: 0.25rem;
+
+    span {
+      color: lightgoldenrodyellow;
+
+      span {
+        text-justify: auto;
+      }
+    }
+  }
+
+  div.text-input-field {
+    padding: 0.25em;
+
+    input {
+      width: 7rem;
+    }
+  }
+}
