@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-flow-card/static/css/main.50bcb0fd.chunk.css",
-    "main.js": "/react-flow-card/static/js/main.bf1a02d7.chunk.js",
-    "main.js.map": "/react-flow-card/static/js/main.bf1a02d7.chunk.js.map",
+    "main.css": "/react-flow-card/static/css/main.b9ce579f.chunk.css",
+    "main.js": "/react-flow-card/static/js/main.696af2f6.chunk.js",
+    "main.js.map": "/react-flow-card/static/js/main.696af2f6.chunk.js.map",
     "runtime-main.js": "/react-flow-card/static/js/runtime-main.9eeafd88.js",
     "runtime-main.js.map": "/react-flow-card/static/js/runtime-main.9eeafd88.js.map",
-    "static/js/2.7a3d4983.chunk.js": "/react-flow-card/static/js/2.7a3d4983.chunk.js",
-    "static/js/2.7a3d4983.chunk.js.map": "/react-flow-card/static/js/2.7a3d4983.chunk.js.map",
+    "static/js/2.93d9ce31.chunk.js": "/react-flow-card/static/js/2.93d9ce31.chunk.js",
+    "static/js/2.93d9ce31.chunk.js.map": "/react-flow-card/static/js/2.93d9ce31.chunk.js.map",
     "index.html": "/react-flow-card/index.html",
-    "static/css/main.50bcb0fd.chunk.css.map": "/react-flow-card/static/css/main.50bcb0fd.chunk.css.map",
-    "static/js/2.7a3d4983.chunk.js.LICENSE.txt": "/react-flow-card/static/js/2.7a3d4983.chunk.js.LICENSE.txt"
+    "static/css/main.b9ce579f.chunk.css.map": "/react-flow-card/static/css/main.b9ce579f.chunk.css.map",
+    "static/js/2.93d9ce31.chunk.js.LICENSE.txt": "/react-flow-card/static/js/2.93d9ce31.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9eeafd88.js",
-    "static/js/2.7a3d4983.chunk.js",
-    "static/css/main.50bcb0fd.chunk.css",
-    "static/js/main.bf1a02d7.chunk.js"
+    "static/js/2.93d9ce31.chunk.js",
+    "static/css/main.b9ce579f.chunk.css",
+    "static/js/main.696af2f6.chunk.js"
   ]
 }
