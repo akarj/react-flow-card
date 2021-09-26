@@ -3,14 +3,8 @@ import ReactFlowWorkField from "./Components/ReactFlowWorkField/ReactFlowWorkFie
 import BottomBar from "./Components/BottomBar/BottomBar";
 
 function App() {
-  const generateCard = e => {
-    console.log(e);
-  };
   return (
     <div className="App">
-      <div className="generate-button-div" onClick={generateCard}>
-        <span>Generate</span>
-      </div>
       <div className="main-container">
         <ReactFlowWorkField />
       </div>

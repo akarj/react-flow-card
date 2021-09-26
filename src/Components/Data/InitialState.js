@@ -1,7 +1,7 @@
 export const initialState = [
   {
     id: "text-01",
-    type: "input",
+    type: "TextNode",
     data: {
       label: "Text Input",
     },
@@ -12,7 +12,7 @@ export const initialState = [
   },
   {
     id: "image-01",
-    type: "input",
+    type: "ImageNode",
     data: {
       label: "image Input",
     },
@@ -23,7 +23,7 @@ export const initialState = [
   },
   {
     id: "card-01",
-    type: "input",
+    type: "CardNode",
     data: {
       label: "card Input",
     },
@@ -32,36 +32,19 @@ export const initialState = [
       y: 50,
     },
   },
+
   {
-    id: "output-01",
-    type: "output",
-    data: {
-      label: "Card Generate",
-    },
-    position: {
-      x: 500,
-      y: 150,
-    },
-  },
-  {
-    id: "text-01-output-01",
+    id: "text-01-card-01",
     type: "straight",
     source: "text-01",
-    target: "output-01",
+    target: "card-01",
     animated: true,
   },
   {
-    id: "image-01-output-01",
+    id: "image-01-card-01",
     type: "straight",
     source: "image-01",
-    target: "output-01",
-    animated: true,
-  },
-  {
-    id: "card-01-output-01",
-    type: "straight",
-    source: "card-01",
-    target: "output-01",
+    target: "card-01",
     animated: true,
   },
 ];

@@ -20,14 +20,7 @@ const nodeTypes = {
 };
 
 /*
-[TODO]
 
-
-@params :[modules]
-   => 1. Image Module
-    2. Text Module
-    3. Card Module
-    4. OutputModule
 
 
 */
@@ -79,23 +72,32 @@ export default function ReactFlowWorkField() {
 
   const onLoad = _reactFlowInstance => setReactFlowInstance(_reactFlowInstance);
 
+  const generateCard = e => {
+    console.log(e);
+  };
+
   return (
-    <div className="reactFlowWorkField-container" ref={reactFlowWrapper}>
-      <ReactFlow
-        onConnect={onConnect}
-        elements={elements}
-        nodeTypes={nodeTypes}
-        snapToGrid={true}
-        snapGrid={[20, 20]}
-        defaultZoom={1.5}
-        onDragOver={onDragOver}
-        onDrop={onDrop}
-        onLoad={onLoad}
-        style={{ backgroundColor: "lightcoral" }}
-        onElementsRemove={onElementsRemove}
-      >
-        <Controls />
-      </ReactFlow>
-    </div>
+    <>
+      <div className="generate-button-div" onClick={generateCard}>
+        <span>Generate</span>
+      </div>
+      <div className="reactFlowWorkField-container" ref={reactFlowWrapper}>
+        <ReactFlow
+          onConnect={onConnect}
+          elements={elements}
+          nodeTypes={nodeTypes}
+          snapToGrid={true}
+          snapGrid={[20, 20]}
+          defaultZoom={1.5}
+          onDragOver={onDragOver}
+          onDrop={onDrop}
+          onLoad={onLoad}
+          style={{ backgroundColor: "lightcoral" }}
+          onElementsRemove={onElementsRemove}
+        >
+          <Controls />
+        </ReactFlow>
+      </div>
+    </>
   );
 }
