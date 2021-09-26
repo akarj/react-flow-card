@@ -1,0 +1,81 @@
+div.card-container {
+  width: 16.5rem;
+  height: 170px;
+  border-radius: 8px;
+  display: flex;
+  background-color: #555;
+  flex-direction: column;
+  border: 2px solid black;
+
+  div.header-div {
+    header {
+      margin-top: 0.25rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      padding: 0.25rem 0;
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: 500;
+      color: blanchedalmond;
+    }
+  }
+
+  div.color-input-div {
+    padding: 0.25rem 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      padding: 0.1rem 0.25rem;
+      display: flex;
+      text-align: left;
+
+      div.header {
+        font-size: 0.8rem;
+        width: 9em;
+        color: blanchedalmond;
+        padding-left: 0.5em;
+      }
+      div.value-input {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transform: translateY(-11%);
+        // background-color: rgb(76, 196, 46);
+        label {
+          font-size: 0.8rem;
+        }
+        input[type="text"] {
+          margin-left: 0.1rem;
+          margin-right: 0.25rem;
+          width: 1.35rem;
+          height: 0.8rem;
+          border: none;
+          border-bottom: 1px solid black;
+          background-color: transparent;
+          outline: none;
+          color: blanchedalmond;
+
+          &::placeholder {
+            font-size: 0.5;
+          }
+        }
+        .R {
+          color: red;
+        }
+        .G {
+          color: green;
+        }
+        .B {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  div.add-input-button-div {
+    margin-top: 0.5rem;
+  }
+}
