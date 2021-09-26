@@ -16,17 +16,20 @@ export default function ImageField() {
         </header>
       </div>
       <div className="image-container">
-        {imageFile && <img src={imageFile} alt="cardx"></img>}
+        {imageFile && <img src={imageFile} alt="card"></img>}
       </div>
       <div className="image-add">
-        <input
-          type="file"
-          name="imageFile"
-          id="imageFile"
-          accept="image/*"
-          placeholder="Add Image"
-          onChange={changeHandler}
-        />
+        <label htmlFor="imageFile">
+          <input
+            type="file"
+            name="imageFile"
+            id="imageFile"
+            accept="image/*"
+            placeholder="Add Image"
+            onChange={changeHandler}
+          />
+          <span>Add Image</span>
+        </label>
       </div>
       <Handle className="nodeOut" type="source" position="right" />
     </div>

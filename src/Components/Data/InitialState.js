@@ -7,7 +7,7 @@ export const initialState = [
     },
     position: {
       x: 100,
-      y: 100,
+      y: 50,
     },
   },
   {
@@ -18,7 +18,7 @@ export const initialState = [
     },
     position: {
       x: 100,
-      y: 150,
+      y: 200,
     },
   },
   {
@@ -28,8 +28,8 @@ export const initialState = [
       label: "card Input",
     },
     position: {
-      x: 100,
-      y: 50,
+      x: 500,
+      y: 150,
     },
   },
 

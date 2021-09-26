@@ -6,12 +6,29 @@ div.reactFlowWorkField-container {
   height: calc(100vh - 5.2rem);
 }
 div.generate-button-div {
+  z-index: 99999;
   position: absolute;
   width: 186px;
   height: 70px;
-  left: 1157px;
-  top: 917px;
-
-  background: #565656;
+  right: 20px;
+  top: 10px;
   border-radius: 11px;
+
+  label {
+    button {
+      color: blanchedalmond;
+      background: #565656;
+      font-size: 1.5rem;
+      border-radius: 11px;
+      opacity: 0.8;
+      width: 80%;
+      height: 80%;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+        // transform: brightness(1.1);
+      }
+    }
+  }
 }

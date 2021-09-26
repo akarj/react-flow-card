@@ -78,8 +78,12 @@ export default function ReactFlowWorkField() {
 
   return (
     <>
-      <div className="generate-button-div" onClick={generateCard}>
-        <span>Generate</span>
+      <div className="generate-button-div">
+        <label htmlFor="generate-button">
+          <button name="generate-button" onClick={generateCard}>
+            Generate
+          </button>
+        </label>
       </div>
       <div className="reactFlowWorkField-container" ref={reactFlowWrapper}>
         <ReactFlow
@@ -92,7 +96,13 @@ export default function ReactFlowWorkField() {
           onDragOver={onDragOver}
           onDrop={onDrop}
           onLoad={onLoad}
-          style={{ backgroundColor: "lightcoral" }}
+          style={{
+            width: "99.8vw",
+            // backgroundColor: "lightcoral",
+            //  borderColor:"black",
+            // borderWidth:"1px",
+            border: "1px solid black",
+          }}
           onElementsRemove={onElementsRemove}
         >
           <Controls />
