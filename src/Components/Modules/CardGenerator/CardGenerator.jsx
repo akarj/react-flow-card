@@ -3,14 +3,73 @@ import { Handle } from "react-flow-renderer";
 import "./CardGenerator.scss";
 
 export default function CardGenerator() {
-  const [color, setColor] = useState({});
+  const [color, setColor] = useState([0, 0, 0]);
+  const [bgColor, setBgColor] = useState([0, 0, 0]);
   const [id, setId] = useState(3);
 
   const [modelIdArray, setModelIdArray] = useState(["M-1", "M-2"]);
 
   const changeHandler = e => {
-    console.log("target", e.target);
-    console.log("value", e.target.value);
+    const name = e.target.name;
+
+    const value = Number(e.target.value);
+    if (value >= 0 && value < 256) {
+      let col;
+
+      if (name[0] === "b") {
+        col = name[3];
+        switch (col) {
+          case "R": {
+            const newBGArray = [value, bgColor[1], bgColor[2]];
+            setBgColor(newBGArray);
+            break;
+          }
+
+          case "G": {
+            const newBGArray = [bgColor[0], value, bgColor[2]];
+            setBgColor(newBGArray);
+            break;
+          }
+
+          case "B": {
+            const newBGArray = [bgColor[0], bgColor[1], value];
+            setBgColor(newBGArray);
+            break;
+          }
+
+          default:
+            console.log("Wrong color input");
+            break;
+        }
+        console.log("bg", bgColor);
+      } else {
+        col = name[5];
+        switch (col) {
+          case "R": {
+            const newBGArray = [value, color[1], color[2]];
+            setColor(newBGArray);
+            break;
+          }
+
+          case "G": {
+            const newBGArray = [color[0], value, color[2]];
+            setColor(newBGArray);
+            break;
+          }
+
+          case "B": {
+            const newBGArray = [color[0], color[1], value];
+            setColor(newBGArray);
+            break;
+          }
+
+          default:
+            console.log("Wrong color input");
+            break;
+        }
+        console.log("text", color);
+      }
+    }
   };
 
   const clickHandler = e => {
