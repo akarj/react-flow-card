@@ -1,11 +1,14 @@
 import "./ReactFlowWorkField.scss";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { initialState } from "../../Components/Data/InitialState";
 import ReactFlow, {
   removeElements,
   addEdge,
   // ReactFlowProvider,
   Controls,
+  Background,
+  ReactFlowProvider,
+  useStoreState,
 } from "react-flow-renderer";
 import TextNode from "../Modules/TextField/TextField";
 import ImageNode from "../Modules/ImageField/ImageField";
@@ -47,7 +50,26 @@ export default function ReactFlowWorkField() {
     event.dataTransfer.dropEffect = "move";
   };
 
-  const onConnect = params => setElements(els => addEdge(params, els));
+  useEffect(() => {
+    const onChange = event => {
+      setElements(els =>
+        els.map(e => {
+          return {
+            ...e,
+            data: {
+              ...e.data,
+            },
+          };
+        })
+      );
+    };
+  }, []);
+  const onConnect = params =>
+    setElements(els => {
+      console.log("params", params);
+      console.log("els", els);
+      return addEdge(params, els);
+    });
 
   const onElementsRemove = elementsToRemove =>
     setElements(els => removeElements(elementsToRemove, els));
@@ -86,27 +108,30 @@ export default function ReactFlowWorkField() {
         </label>
       </div>
       <div className="reactFlowWorkField-container" ref={reactFlowWrapper}>
-        <ReactFlow
-          onConnect={onConnect}
-          elements={elements}
-          nodeTypes={nodeTypes}
-          snapToGrid={true}
-          snapGrid={[20, 20]}
-          defaultZoom={1.5}
-          onDragOver={onDragOver}
-          onDrop={onDrop}
-          onLoad={onLoad}
-          style={{
-            width: "99.8vw",
-            // backgroundColor: "lightcoral",
-            //  borderColor:"black",
-            // borderWidth:"1px",
-            border: "1px solid black",
-          }}
-          onElementsRemove={onElementsRemove}
-        >
-          <Controls />
-        </ReactFlow>
+        <ReactFlowProvider>
+          <ReactFlow
+            onConnect={onConnect}
+            elements={elements}
+            nodeTypes={nodeTypes}
+            snapToGrid={true}
+            snapGrid={[20, 20]}
+            defaultZoom={1.5}
+            onDragOver={onDragOver}
+            onDrop={onDrop}
+            onLoad={onLoad}
+            style={{
+              width: "99.8vw",
+              // backgroundColor: "lightcoral",
+              //  borderColor:"black",
+              // borderWidth:"1px",
+              border: "1px solid black",
+            }}
+            onElementsRemove={onElementsRemove}
+          >
+            <Controls />
+            <Background />
+          </ReactFlow>
+        </ReactFlowProvider>
       </div>
     </>
   );

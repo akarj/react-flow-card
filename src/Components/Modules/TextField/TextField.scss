@@ -1,10 +1,11 @@
 div.textField-container {
-  height: 11rem;
-  width: 10rem;
+  width: 186px;
+  min-height: 87px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(41, 223, 81);
-
+  background-color: #c4c4c4;
+  border-radius: 6px;
   div.desc {
     margin: 0.25rem;
     padding: 0.25rem;

@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import "./TextField.scss";
 import { Handle } from "react-flow-renderer";
 
-export default function TextField() {
+export default memo(({ data }) => {
   const [text, setText] = useState("");
   const changeHandler = event => {
     setText(event.target.value);
+
+    let newData = { ...data, text };
+    data = newData;
   };
   return (
     <div className="textField-container">
+      {console.log(data)}
       <div className="desc">
         <header>
           <h2>Text Field</h2>
@@ -27,4 +31,4 @@ export default function TextField() {
       <Handle className="nodeOut" type="source" position="right" />
     </div>
   );
-}
+});

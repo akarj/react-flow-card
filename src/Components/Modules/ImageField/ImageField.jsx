@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Handle } from "react-flow-renderer";
 import "./ImageField.scss";
 
-export default function ImageField() {
+export default memo(({ data }) => {
   const [imageFile, setImageFile] = useState(null);
 
   // [Functions]
@@ -34,4 +34,4 @@ export default function ImageField() {
       <Handle className="nodeOut" type="source" position="right" />
     </div>
   );
-}
+});

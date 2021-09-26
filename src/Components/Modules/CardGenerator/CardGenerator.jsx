@@ -1,11 +1,17 @@
-import React, { useRef, useState } from "react";
-import { Handle } from "react-flow-renderer";
+import React, { memo, useState } from "react";
+import { Handle, useStoreState, useStoreActions } from "react-flow-renderer";
 import "./CardGenerator.scss";
 
-export default function CardGenerator() {
+export default memo(({ data }) => {
   const [color, setColor] = useState([0, 0, 0]);
   const [bgColor, setBgColor] = useState([0, 0, 0]);
   const [id, setId] = useState(3);
+  const nodes = useStoreState(store => store.nodes);
+
+  const transform = useStoreState(store => store.transform);
+  const setSelectedElements = useStoreActions(
+    actions => actions.setSelectedElements
+  );
 
   const [modelIdArray, setModelIdArray] = useState(["M-1", "M-2"]);
 
@@ -85,6 +91,9 @@ export default function CardGenerator() {
       <div className="card-container">
         <div className="header-div">
           <header>Card Generator</header>
+          {console.log("nodes", nodes)}
+          {/* {console.log("transform", transform)}
+          {console.log("setSelectedElements", setSelectedElements)} */}
         </div>
         <div className="color-input-div">
           <div className="background-color">
@@ -229,4 +238,4 @@ export default function CardGenerator() {
       />
     </>
   );
-}
+});

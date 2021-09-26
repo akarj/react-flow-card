@@ -33,18 +33,18 @@ export const initialState = [
     },
   },
 
-  {
-    id: "text-01-card-01",
-    type: "straight",
-    source: "text-01",
-    target: "card-01",
-    animated: true,
-  },
-  {
-    id: "image-01-card-01",
-    type: "straight",
-    source: "image-01",
-    target: "card-01",
-    animated: true,
-  },
+  // {
+  //   id: "text-01-card-01",
+  //   type: "straight",
+  //   source: "text-01",
+  //   target: "card-01",
+  //   animated: true,
+  // },
+  // {
+  //   id: "image-01-card-01",
+  //   type: "straight",
+  //   source: "image-01",
+  //   target: "card-01",
+  //   animated: true,
+  // },
 ];
