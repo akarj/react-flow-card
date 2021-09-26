@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./TextField.scss";
+import { Handle } from "react-flow-renderer";
 
 export default function TextField() {
   const [text, setText] = useState("");
@@ -23,6 +24,7 @@ export default function TextField() {
           onChange={changeHandler}
         />
       </div>
+      <Handle className="nodeOut" type="source" position="right" />
     </div>
   );
 }
