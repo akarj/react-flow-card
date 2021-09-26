@@ -16,7 +16,7 @@ export default function ImageField() {
         </header>
       </div>
       <div className="image-container">
-        {imageFile && <img src={imageFile}></img>}
+        {imageFile && <img src={imageFile} alt="cardx"></img>}
       </div>
       <div className="image-add">
         <input
